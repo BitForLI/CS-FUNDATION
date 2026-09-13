@@ -1,0 +1,10 @@
+:root { font-family: system-ui, sans-serif; color: #172033; background: #f3f6fb; }
+body { margin: 0; }
+main { width: min(42rem, calc(100% - 2rem)); margin: 3rem auto; background: white; padding: 2rem; border-radius: 1rem; }
+form { display: grid; grid-template-columns: 1fr auto; gap: .75rem; }
+label { grid-column: 1 / -1; font-weight: 700; }
+input, button { font: inherit; padding: .7rem; }
+button { cursor: pointer; }
+li { display: flex; justify-content: space-between; align-items: center; margin-top: .75rem; }
+.done span { text-decoration: line-through; color: #687386; }
+

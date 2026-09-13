@@ -1,0 +1,13 @@
+@base = http://localhost:5080
+
+GET {{base}}/health
+
+###
+GET {{base}}/api/todos
+
+###
+POST {{base}}/api/todos
+Content-Type: application/json
+
+{ "title": "Trace this request through every layer" }
+

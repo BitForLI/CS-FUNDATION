@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+.idea/
+.vscode/
+.DS_Store
+*.user
+*.suo
+.env
+

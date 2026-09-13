@@ -1,0 +1,23 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #172033; background: #ebeef3; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 20rem; }
+button, input { font: inherit; }
+.shell { width: min(44rem, calc(100% - 2rem)); margin: 4rem auto; padding: 2.5rem; background: #fffdf8; border: 1px solid #d7dbe2; box-shadow: 0 1.5rem 4rem rgb(23 32 51 / 12%); }
+.eyebrow { color: #a44a20; letter-spacing: .14em; font-size: .75rem; font-weight: 800; }
+h1 { margin: .25rem 0; font-family: Georgia, serif; font-size: clamp(2.5rem, 8vw, 5rem); line-height: .95; }
+.intro { max-width: 35rem; color: #5e6778; }
+form { margin-top: 2rem; }
+label { display: block; margin-bottom: .5rem; font-weight: 700; }
+.inputRow { display: grid; grid-template-columns: 1fr auto; }
+input { min-width: 0; padding: .8rem 1rem; border: 1px solid #aeb5c0; }
+button { border: 0; cursor: pointer; }
+.inputRow button { padding: .8rem 1.2rem; color: white; background: #172033; }
+.summary { display: flex; justify-content: space-between; margin: 1.5rem 0 .5rem; color: #687386; font-size: .9rem; }
+ul { list-style: none; margin: 0; padding: 0; }
+li { display: grid; grid-template-columns: 1fr auto; border-top: 1px solid #d7dbe2; }
+.titleButton { padding: 1rem 0; text-align: left; color: inherit; background: transparent; }
+.remove { width: 3rem; color: #a44a20; background: transparent; font-size: 1.5rem; }
+.done .titleButton { color: #808896; text-decoration: line-through; }
+.error { padding: .75rem; color: #842424; background: #ffe9e7; }
+@media (max-width: 36rem) { .shell { margin: 1rem auto; padding: 1.25rem; } }
+

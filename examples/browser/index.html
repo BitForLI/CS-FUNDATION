@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser fundamentals</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Browser fundamentals / 浏览器基础</h1>
+      <form id="task-form">
+        <label for="task-title">Task / 任务</label>
+        <input id="task-title" name="title" required maxlength="100" />
+        <button type="submit">Add / 添加</button>
+      </form>
+      <p id="status" role="status" aria-live="polite"></p>
+      <ul id="task-list"></ul>
+    </main>
+    <script defer src="app.js"></script>
+  </body>
+</html>
