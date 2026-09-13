@@ -2,10 +2,12 @@
 **/obj/
 **/node_modules/
 **/dist/
+**/*.tsbuildinfo
+apps/task-board/client/vite.config.js
+apps/task-board/client/vite.config.d.ts
 .idea/
 .vscode/
 .DS_Store
 *.user
 *.suo
 .env
-
