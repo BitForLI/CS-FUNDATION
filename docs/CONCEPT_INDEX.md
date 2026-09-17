@@ -9,13 +9,15 @@ This index tells you exactly where a concept is implemented and what observable 
 | Generics | Language | `01-language-basics/Program.cs` | Reuse type-safe algorithms / 复用类型安全算法 | Generic `Last<T>` works for strings and numbers |
 | LINQ | Language/Data | `01-language-basics/Program.cs` | Filter/project in-memory sequences / 查询内存集合 | Active items are filtered and summed |
 | Union narrowing and promises | Frontend language | `examples/typescript/src/index.ts` | Model success/failure and asynchronous values / 表达成功失败与异步值 | TypeScript example prints narrowed results |
-| Big-O | Algorithm | `02-data-structures/Program.cs` | Compare growth as input grows / 比较输入扩大后的成本 | Linear and logarithmic operation counts |
+| Big-O | Algorithm | `examples/csharp/02-data-structures/Program.cs`, `examples/csharp/08-interview-algorithms/Program.cs` | Compare growth as input grows / 比较输入扩大后的成本 | Code comments state time/space costs for four patterns |
 | Stack/Queue/Dictionary | Algorithm | `02-data-structures/Program.cs` | LIFO/FIFO/key lookup / 后进先出、先进先出、键查找 | Deterministic traversal output |
 | BFS | Algorithm | `02-data-structures/Program.cs` | Shortest path in an unweighted graph / 无权图最短路径 | Route `A -> B -> D` |
+| Hash lookup, sliding window, stack, lower bound | Algorithm/interview | `examples/csharp/08-interview-algorithms/Program.cs` | Practice invariant + complexity + boundary cases / 练习不变量、复杂度、边界 | Four self-checks pass |
 | Async and cancellation | Runtime | `03-async-concurrency/Program.cs` | Wait without blocking a thread / 非阻塞等待 | Cancellation stops work cleanly |
 | Race condition and lock | Runtime | `03-async-concurrency/Program.cs` | Protect shared mutable state / 保护共享可变状态 | Locked counter reaches expected value |
 | Channel | Runtime/Messaging | `03-async-concurrency/Program.cs` | Producer-consumer pipelines / 生产消费管线 | Consumer drains queued jobs |
 | File/stream/JSON | OS boundary | `04-file-io-json/Program.cs` | Small durable local state and interchange / 小型本地状态与数据交换 | JSON round-trip equality |
+| Value/reference, record equality, disposal | Runtime/interview | `examples/csharp/09-runtime-semantics/Program.cs` | Explain aliasing, equality and resource lifetime / 解释别名、相等性和资源生命周期 | Five self-checks pass |
 | TCP and framing | Network | `05-networking/Program.cs` | Understand connection-oriented byte streams / 理解面向连接字节流 | Local echo response |
 | PBKDF2 and salt | Security | `06-security/Program.cs` | Store password verifiers / 保存密码验证值 | Correct password true, wrong false |
 | Schema and constraints | Database | `examples/sql/schema.sql` | Enforce durable invariants / 强制持久不变量 | Duplicate email and orphan rows rejected |
@@ -26,6 +28,7 @@ This index tells you exactly where a concept is implemented and what observable 
 | Application service | Application | `apps/task-board/server/Application/TodoService.cs` | Coordinate use cases / 编排用例 | Validation and not-found behavior tested |
 | Repository | Infrastructure | `apps/task-board/server/Infrastructure/` | Isolate persistence mechanism / 隔离持久化机制 | In-memory adapter can be replaced |
 | React state/effect/form | Frontend | `apps/task-board/client/src/App.tsx` | Synchronize UI with server state / 同步界面和服务端状态 | CRUD updates without page reload |
+| Event loop task/microtask order | Frontend language/interview | `examples/typescript/src/event-loop.ts` | Debug ordering between sync code, promises and timers / 排查同步、Promise 与定时器顺序 | Prints `sync -> promise -> timer` |
 | Unit test and fake | Test | `tests/TaskBoard.Tests/` | Prove a rule in isolation / 隔离验证业务规则 | `dotnet test` passes |
 | Idempotency | Distributed | `07-distributed-patterns/Program.cs` | Safely retry commands / 安全重试命令 | Duplicate key executes once |
 | Timeout/retry/circuit breaker | Distributed | `07-distributed-patterns/Program.cs` | Bound remote dependency failure / 限制远程依赖故障影响 | Failed calls stop after a bound |
@@ -33,3 +36,5 @@ This index tells you exactly where a concept is implemented and what observable 
 | Health check | Operations | `apps/task-board/server/Program.cs` | Separate liveness from business APIs / 区分存活与业务接口 | `/health` returns 200 |
 | CI | Delivery | `.github/workflows/ci.yml` | Re-run build/tests on every change / 每次变更重复构建测试 | GitHub Actions passes |
 | Container | Delivery | `apps/task-board/server/Dockerfile` | Package runtime and app consistently / 一致打包运行环境 | Container serves `/health` |
+
+Interview mechanism and trade-off explanations: [`INTERVIEW_FOUNDATIONS.md`](INTERVIEW_FOUNDATIONS.md). / 面试机制与取舍解释见此文档。

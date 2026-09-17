@@ -10,6 +10,7 @@ Paths:
 
 - `examples/csharp/01-language-basics/`
 - `examples/csharp/02-data-structures/`
+- `examples/csharp/08-interview-algorithms/`
 
 Completion check: explain why a dictionary lookup is normally preferable to scanning a list by ID.
 
@@ -24,6 +25,7 @@ Paths:
 - `examples/csharp/03-async-concurrency/`
 - `examples/csharp/04-file-io-json/`
 - `examples/csharp/05-networking/`
+- `examples/csharp/09-runtime-semantics/`
 
 Completion check: identify where cancellation is observed and why two concurrent increments can lose updates.
 
@@ -69,3 +71,6 @@ Paths:
 
 Completion check: explain why retrying a non-idempotent request can create two orders.
 
+## Interview recap / 面试复盘
+
+Read [`INTERVIEW_FOUNDATIONS.md`](INTERVIEW_FOUNDATIONS.md) and answer each question using definition, mechanism, code path, trade-off and failure case. Run `npm run event-loop` in `examples/typescript/` when reviewing browser scheduling. / 按定义、原理、代码路径、取舍、失败场景五步回答；复习事件循环时运行 TypeScript 示例。

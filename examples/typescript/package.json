@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "build": "tsc --noEmit",
-    "start": "tsx src/index.ts"
+    "start": "tsx src/index.ts",
+    "event-loop": "node --experimental-strip-types src/event-loop.ts"
   },
   "devDependencies": {
     "tsx": "^4.20.5",
     "typescript": "~5.9.2"
   }
 }
-

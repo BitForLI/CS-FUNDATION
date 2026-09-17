@@ -30,6 +30,7 @@ jobs:
         run: |
           for project in examples/csharp/*/*.csproj; do
             dotnet build "$project" --configuration Release
+            dotnet run --project "$project" --configuration Release --no-build
           done
 
       - name: Test layered backend
@@ -47,6 +48,7 @@ jobs:
           npm ci
           npm run build
           npm start
+          npm run event-loop
 
       - name: Check plain browser JavaScript
         run: node --check examples/browser/app.js
